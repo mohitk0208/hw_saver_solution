@@ -16,9 +16,9 @@ export default function Signup() {
 	async function handleSubmit(e) {
 		e.preventDefault();
 
-		console.log(emailRef.current.value);
-		console.log(passwordRef.current.value);
-		console.log(confirmPasswordRef.current.value);
+		// console.log(emailRef.current.value);
+		// console.log(passwordRef.current.value);
+		// console.log(confirmPasswordRef.current.value);
 
 		if (passwordRef.current.value !== confirmPasswordRef.current.value) {
 			return setError("passwords do not match");
@@ -31,7 +31,7 @@ export default function Signup() {
             
             
             console.log(`${currentUser}`);
-            // history.push("/")
+            history.push("/")
             
 
 		} catch {
