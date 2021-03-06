@@ -3,9 +3,11 @@ import MainNavigation from '../navigation/MainNavigation'
 
 export default function Albums() {
     return (
-        <div>
+        <div className="albums-container">
             <MainNavigation />
-            Albums
+            <div className="albums-main">
+
+            </div>
         </div>
     )
 }

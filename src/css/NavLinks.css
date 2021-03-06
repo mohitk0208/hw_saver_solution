@@ -6,10 +6,18 @@
     justify-content: space-around;
 }
 
+.navlink-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .navlink-item a {
     text-decoration: none;
     padding: .5rem;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
 }
 
 .navlink-item a:hover,
@@ -17,4 +25,10 @@
 .navlink-item a.active {
     color: yellow;
     font-weight: bold;
+}
+
+
+.navlink-item button {
+    padding: .5rem;
+    user-select: none;
 }

@@ -1,8 +1,8 @@
 header {
     width: 100%;
-    padding: 1rem 3rem;
+    padding: 1rem 10%;
     background-color: rgba(64, 224, 208, 0.418);
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
