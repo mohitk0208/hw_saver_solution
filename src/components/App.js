@@ -6,6 +6,9 @@ import "./App.css";
 import Signup from "./authentication/Signup";
 import PrivateRoute from "./authentication/PrivateRoute";
 import Home from "./pages/Home";
+import Posts from "./pages/Posts";
+import Albums from "./pages/Albums";
+import Images from "./pages/Images";
 
 function App() {
 	return (
@@ -13,7 +16,11 @@ function App() {
 			<AuthProvider>
 				<Switch>
 					{/* pages routes */}
-					<PrivateRoute path="/" component={Home} />
+					<PrivateRoute path="/" exact component={Home} />
+					<PrivateRoute path="/posts" component={Posts} />
+					<PrivateRoute path="/albums" component={Albums} />
+					<PrivateRoute path="/images" component={Images} />
+
 
 					{/* Auth routes */}
 					<Route path="/login" component={Login} />

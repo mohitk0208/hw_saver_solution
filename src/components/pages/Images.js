@@ -1,11 +1,11 @@
 import React from 'react'
 import MainNavigation from '../navigation/MainNavigation'
 
-export default function Home() {
+export default function Images() {
     return (
         <div>
-        <MainNavigation />
-            HOME
+            <MainNavigation />
+            Images
         </div>
     )
 }
