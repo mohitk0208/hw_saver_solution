@@ -1,6 +1,8 @@
 import React from 'react'
 import NavLinks from './NavLinks'
 
+import "../../css/MainNavigation.css"
+
 export default function MainNavigation() {
     return (
         <header>

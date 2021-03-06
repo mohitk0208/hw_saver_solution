@@ -1,0 +1,20 @@
+.navlinks {
+	display: flex;
+	width: 80%;
+	list-style: none;
+	max-width: 500px;
+    justify-content: space-around;
+}
+
+
+.navlink-item a {
+    text-decoration: none;
+    padding: .5rem;
+}
+
+.navlink-item a:hover,
+.navlink-item a:active,
+.navlink-item a.active {
+    color: yellow;
+    font-weight: bold;
+}

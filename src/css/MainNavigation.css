@@ -1,0 +1,16 @@
+header {
+    width: 100%;
+    padding: 1rem 3rem;
+    background-color: rgba(64, 224, 208, 0.418);
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 2rem;
+}
