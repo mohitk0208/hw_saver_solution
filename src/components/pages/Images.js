@@ -34,7 +34,7 @@ export default function Images() {
 
 					<div className="search-result-container">
 						{image && (
-							<img width="404px" height="404px" src={image} alt="" />
+							<img width="404px"  src={image} alt="" />
 						)}
 					</div>
 				</div>

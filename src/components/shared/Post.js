@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../../css/Post.css";
+import Modal from "./Modal";
 
 export default function Post({post}) {
-	
+
+	const [comments,setComments] = useState()
+	const [openModal,setOpenModal] = useState(false)
+
+	function modalCloseHandler() {
+		setOpenModal(false)
+	}
+
+
 	return (
 		<div className="post-container">
-			<h3 className="post__title">csdkbksndn sadbudsb</h3>
+			<h3 className="post__title">{post.title}</h3>
 			<p className="post__body">
-				est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea
-				dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut
-				reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla
+				{post.body}
 			</p>
 			<div className="post__footer">
-				<button className="post__comments">COMMENTS</button>
+				<button className="post__comments" onClick={() => setOpenModal(true)}>COMMENTS</button>
 			</div>
+			<Modal open={openModal} onClose={modalCloseHandler}>
+				<h1 style={{color:"white"}}>Hello World</h1>
+			</Modal>
 		</div>
 	);
 }

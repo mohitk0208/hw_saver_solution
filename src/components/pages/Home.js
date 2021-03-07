@@ -32,7 +32,7 @@ export default function Home() {
 	return (
 		<>
 			{!loading && data && (
-				<div className="home-container" style={{backgroundImage:`url(${data.url})`}}>
+				<div className="home-container" style={{backgroundImage:`url(${data.hdurl})`}}>
 					<MainNavigation />
 					<div className="home-main center">
 						<h2 className="home-main__title">{data.title}</h2>
