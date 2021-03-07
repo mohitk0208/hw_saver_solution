@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import MainNavigation from "../navigation/MainNavigation";
 
 import "../../css/Images.css";
-import search from "../../iconmonstr-magnifier-6.svg";
 
 export default function Images() {
 	const searchBarRef = useRef();

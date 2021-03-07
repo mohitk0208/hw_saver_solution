@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 
@@ -6,19 +6,15 @@ import "../../css/NavLinks.css"
 
 export default function NavLinks() {
 
-    const [error,setError] = useState("");
-
     const {logout}  = useAuth();
     const history = useHistory()
 
     async function handleLogout() {
 
-        setError('')
         try {
             await logout()
             history.push("/login")
         }catch {
-            setError("Failed to logout.")
         }
 
     }
