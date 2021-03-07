@@ -2,7 +2,7 @@
 	width: 50px;
     height: 50px;
     border-radius: 20%;
-    animation: rotate 5s linear infinite forwards;
+    animation: rotate 3s linear infinite forwards;
 }
 
 @keyframes rotate {

@@ -5,6 +5,36 @@
     border: 1px solid gray;
     border-radius: 5px;
     margin: 1rem .25rem;
+    background-color:#515151 ;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px #b8b8b827;
+}
+.post-container:hover {
+    box-shadow: 2px 2px 20px 1px #77777762;
+}
+
+.post__title {
+    color: #fff15cb7;
+    padding-bottom: 1em;
+}
+
+.post__body {
+    color: #fff79e9d;
+    font-size: 0.9em;
+}
+
+.post__footer {
+    padding-top: 1em;
+}
+
+.post__comments {
+    color: #ffea00;
+    transition: all 0.2s ease-in-out;
+}
+
+.post__comments:hover {
+    color: #fffac2;
+    cursor: pointer;
 }
 
 .comments-container {

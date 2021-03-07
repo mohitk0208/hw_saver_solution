@@ -22,8 +22,8 @@
 	display: flex;
 	flex-direction: column;
 	z-index: 2;
-    background: radial-gradient(rgba(0,0,0,0.7), transparent,transparent);
-    background-size: 150% 200%;
+    background: radial-gradient(circle,#0000009d 30%,#0000003d ,transparent );
+    /* background-size: 150% 200%; */
     background-position: center center;
 }
 
@@ -37,11 +37,13 @@
 }
 
 .home-main__title {
-	font-size: 2.3rem;
+    font-size: 2.3rem;
+    color: #ffcf2f;
 }
 
 .home-main__explanation {
 	/* font-size: 1.1rem; */
 	width: 60ch;
-	line-height: 2rem;
+    line-height: 2rem;
+    color: #fff6a1ec;
 }

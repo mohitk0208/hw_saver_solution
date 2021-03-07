@@ -22,22 +22,16 @@ export default function Post({ post }) {
 			.then((responseData) => setComments(responseData))
 			.then(console.log(comments))
 			.catch()
-			.finally(setTimeout(() => setLoading(false) ,2000));
-
-		
+			.finally(setTimeout(() => setLoading(false), 1000));
 	}
 
 	return (
-		<div className="post-container">
-			<h3 className="post__title">{post.title}</h3>
-			<p className="post__body">{post.body}</p>
-			<div className="post__footer">
-				<button className="post__comments" onClick={modalOpenHandler}>
-					COMMENTS
-				</button>
+		<>
+			<div className="post-container" onClick={modalOpenHandler}>
+				<h3 className="post__title">{post.title}</h3>
+				<p className="post__body">{post.body}</p>
 			</div>
 			<Modal open={openModal} onClose={modalCloseHandler}>
-				<h1 style={{ color: "white" }}>Hello World</h1>
 				<div className="comments-container">
 					{loading && <LoadingSpinner />}
 					{!loading &&
@@ -47,6 +41,6 @@ export default function Post({ post }) {
 						))}
 				</div>
 			</Modal>
-		</div>
+		</>
 	);
 }
