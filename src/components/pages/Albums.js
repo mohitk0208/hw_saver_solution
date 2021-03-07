@@ -9,6 +9,7 @@ export default function Albums() {
 	const [albums, setAlbums] = useState();
 
 	useEffect(() => {
+		setLoading(true);
 		fetch("https://jsonplaceholder.typicode.com/albums")
 			.then((response) => response.json())
 			.then((responseData) => setAlbums(responseData))
@@ -25,7 +26,9 @@ export default function Albums() {
 						<h2>ALBUMS</h2>
 						<hr />
 						<div className="albums">
-							{albums.map(album => <Album album={album} key={album.id} />)}
+							{albums.map((album) => (
+								<Album album={album} key={album.id} />
+							))}
 						</div>
 					</div>
 				</div>

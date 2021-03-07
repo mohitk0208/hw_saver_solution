@@ -6,9 +6,12 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+    pointer-events: all;
 }
 
 .modal {
+    width: 80%;
+    max-width: 500px;
     position: fixed;
     top: 50%;
     left: 50%;

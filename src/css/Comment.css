@@ -1,0 +1,10 @@
+.comment {
+    padding: .5em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: .25em .5em;
+}
+
+.comment__body {
+    text-align: center;
+}
