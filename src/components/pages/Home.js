@@ -1,28 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MainNavigation from "../navigation/MainNavigation";
 
 import "../../css/Home.css";
 
 export default function Home() {
+	const [loading, setLoading] = useState(true);
+	const [data, setData] = useState();
+
+	useEffect(() => {
+		async function fetchData() {
+			setLoading(true);
+			try {
+				const response = await fetch(
+					"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
+				);
+
+				const responseData = await response.json();
+
+				setData(responseData);
+
+				console.log(responseData);
+			} catch {}
+			finally {
+				setLoading(false)
+			}
+		}
+		fetchData();
+	}, []);
+
+	
+
 	return (
-		<div className="home-container">
-			<MainNavigation />
-			<div className="home-main center">
-				<h2 className="home-main__title">Perseverance Takes a Spin</h2>
-				<p className="home-main__explanation">
-					After arriving at Jezero Crater on Mars, Perseverance went for a spin
-					on March 4. This sharp image from the car-sized rover's Navcam shows
-					tracks left by its wheels in the martian soil. In preparation for
-					operations on the surface of the Red Planet, its first drive lasted
-					about 33 minutes. On a short and successful test drive Perseverance
-					moved forward 4 meters, made a 150 degree turn, backed up for 2.5
-					meters, and now occupies a different parking space at its newly
-					christened Octavia E. Butler Landing location. Though the total travel
-					distance of the rover's first outing was about 6.5 meters (21 feet),
-					regular commutes of 200 meters or more can be expected in the future.
-					Please take a short survey in aesthetics & astronomy: Sonification
-				</p>
-			</div>
-		</div>
+		<>
+			{!loading && data && (
+				<div className="home-container" style={{backgroundImage:`url(${data.url})`}}>
+					<MainNavigation />
+					<div className="home-main center">
+						<h2 className="home-main__title">{data.title}</h2>
+						<p className="home-main__explanation">
+							{data.explanation}
+						</p>
+					</div>
+				</div>
+			)}
+		</>
 	);
 }
