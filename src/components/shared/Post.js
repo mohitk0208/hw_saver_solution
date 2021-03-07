@@ -32,6 +32,8 @@ export default function Post({ post }) {
 				<p className="post__body">{post.body}</p>
 			</div>
 			<Modal open={openModal} onClose={modalCloseHandler}>
+				<h2 className="comments__heading" >Comments</h2>
+				<hr />
 				<div className="comments-container">
 					{loading && <LoadingSpinner />}
 					{!loading &&

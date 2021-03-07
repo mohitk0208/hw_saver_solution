@@ -17,7 +17,7 @@ export default function Album({ album }) {
 			.then((response) => response.json())
 			.then((responseData) => setAlbumPhotos(responseData))
 			.catch()
-			.finally(setTimeout(() => setLoading(false) ,1000));
+			.finally(setTimeout(() => setLoading(false), 1000));
 	}
 
 	return (
@@ -27,13 +27,19 @@ export default function Album({ album }) {
 				<p onClick={openModalHandler}>View all Photos &gt; </p>
 			</div>
 			<Modal open={openModal} onClose={() => setOpenModal(false)}>
+				<h2 className="photos__heading">Photos</h2>
+				<hr />
 				<div className="photos-container">
-                    {loading && <LoadingSpinner />}
+					{loading && <LoadingSpinner />}
 					{!loading &&
 						albumPhotos &&
 						albumPhotos.map((photo) => (
 							<div className="photo-container">
-								<img src={photo.thumbnailUrl} alt={photo.title} key={photo.id} />
+								<img
+									src={photo.thumbnailUrl}
+									alt={photo.title}
+									key={photo.id}
+								/>
 							</div>
 						))}
 				</div>

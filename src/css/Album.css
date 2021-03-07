@@ -1,11 +1,68 @@
 .album-container {
     width: 20%;
     min-width: 200px;
-    padding: 1rem;
     border: 1px solid gray;
     border-radius: 5px;
     margin: 1rem .25rem;
-    background-color: #515151;
+    background-color: #4b4b4b;
+	cursor: pointer;
+	box-shadow: 2px 2px 10px #b8b8b827;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.album-container:hover {
+	box-shadow: 2px 2px 20px 3px #a3a3a362;
+	background-color: #3b3b3b;
+}
+
+.album-container:hover .album__title {
+	color: #fff15c;
+}
+
+
+.album__title {
+    color: #fff15cb7;
+    padding: 1rem 1rem 0 1rem;
+    background-color: #6b6b6b;
+    transition: color 0.2s ease-in-out;
+    flex-grow: 1;
+
+}
+
+
+.album__footer {
+    padding: .5em 1rem;
+}
+
+.album__footer p {
+    color: #ffea00;
+}
+
+.comments__heading {
+	text-align: center;
+	font-size: 2.5rem;
+    color: #ffea00;
+    margin-bottom: .3em;
+}
+
+.post__comments {
+	color: #ffea00;
+	transition: all 0.2s ease-in-out;
+}
+
+.post__comments:hover {
+	color: #fffac2;
+	cursor: pointer;
+}
+
+.photos__heading {
+	text-align: center;
+	font-size: 2.5rem;
+    color: #ffea00;
+    margin-bottom: .3em;
 }
 
 .photos-container {
@@ -13,6 +70,7 @@
     flex-wrap: wrap;
     justify-content: start;
     overflow-y: auto;
+    margin-top: 1rem;
     height: 80vh;
 }
 

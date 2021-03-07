@@ -19,12 +19,17 @@
 .search-container p {
     text-align: center;
     padding: 2rem ;
+    color: #55544a;
+    font-weight: bold;
 }
 
 .search-container form {
     width: 100%;
     height: 100%;
-    padding: .5rem;
+    margin: .5rem;
+    /* background-color: #4b4b4b; */
+    filter: drop-shadow(1px 1px 10px #5c5c5c) ;
+
 }
 
 /* .search-container form label {
@@ -43,11 +48,15 @@
 .search-bar {
     width: 90%;
     border-radius: 100px 0 0 100px;
+    background-color: #4b4b4b;
+    color: white;
 }
 
 .search-btn {
     width: 10%;
     border-radius: 0 100px 100px 0;
+    background-color: #3a3a3a;
+
 }
 
 .search-result-container {

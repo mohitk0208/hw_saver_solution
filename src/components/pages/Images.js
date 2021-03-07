@@ -1,11 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MainNavigation from "../navigation/MainNavigation";
 
 import "../../css/Images.css";
 
 export default function Images() {
 	const searchBarRef = useRef();
-	const [image, setImage] = useState("https://source.unsplash.com/random");
+	const searchResultContainerRef = useRef();
+	const [image, setImage] = useState("https://source.unsplash.com/random/400x400");
 
 	function searchSubmitHandler(e) {
 		e.preventDefault();
@@ -14,7 +15,7 @@ export default function Images() {
 
 		console.log(keywordString);
 
-		setImage(`https://source.unsplash.com/1600x900/?${keywordString}`);
+		setImage(`https://source.unsplash.com/400x400/?${keywordString}`);
 	}
 
 	return (
@@ -32,10 +33,11 @@ export default function Images() {
 						</form>
 					</div>
 
-					<div className="search-result-container">
-						{image && (
-							<img width="404px"  src={image} alt="" />
-						)}
+					<div
+						className="search-result-container"
+						ref={searchResultContainerRef}
+					>
+						{image && <img width="404px" src={image} alt="" />}
 					</div>
 				</div>
 			</div>

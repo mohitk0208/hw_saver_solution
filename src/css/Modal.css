@@ -24,4 +24,11 @@
     right: 5%;
     top: 10%;
     z-index: 1000;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    color: #ffea00;
 }

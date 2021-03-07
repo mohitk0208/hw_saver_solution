@@ -14,6 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #212121;
+  overflow-x: hidden;
 }
 
 code {
@@ -47,4 +48,11 @@ code {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(129, 129, 129); 
+}
+
+hr {
+  height: 2px;
+  /* background-color: #fefefe; */
+  background: radial-gradient(#ffea00,transparent);
+  border: none;
 }
