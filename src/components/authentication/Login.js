@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import LoadingSpinner from "../shared/LoadingSpinner";
 import CenteredContainer from "./CenteredContainer";
 
 export default function Login() {
@@ -19,8 +20,7 @@ export default function Login() {
 			setError("");
 			setLoading(true);
 			await login(emailRef.current.value, passwordRef.current.value);
-			history.push("/")
-
+			history.push("/");
 		} catch {
 			setError("Failed to login");
 		} finally {
@@ -30,6 +30,7 @@ export default function Login() {
 
 	return (
 		<CenteredContainer>
+			{loading && <LoadingSpinner asOverlay />}
 			<div>
 				{error && alert(error)}
 				<form onSubmit={handleSubmit}>

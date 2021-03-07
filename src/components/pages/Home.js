@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MainNavigation from "../navigation/MainNavigation";
 
 import "../../css/Home.css";
+import LoadingSpinner from "../shared/LoadingSpinner";
 
 export default function Home() {
 	const [loading, setLoading] = useState(true);
@@ -19,26 +20,27 @@ export default function Home() {
 				setData(responseData);
 
 				console.log(responseData);
-			} catch {}
-			finally {
-				setLoading(false)
+			} catch {
+			} finally {
+				setLoading(false);
 			}
 		}
 		fetchData();
 	}, []);
 
-
-
 	return (
 		<>
+			{loading && <LoadingSpinner asOverlay />}
 			{!loading && data && (
-				<div className="home-container" style={{backgroundImage:`url(${data.hdurl})`}}>
+				<div
+					className="home-container"
+					style={{ backgroundImage: `url(${data.hdurl})` }}
+				>
 					<MainNavigation />
+					<div className="home-overlay" />
 					<div className="home-main center">
 						<h2 className="home-main__title">{data.title}</h2>
-						<p className="home-main__explanation">
-							{data.explanation}
-						</p>
+						<p className="home-main__explanation">{data.explanation}</p>
 					</div>
 				</div>
 			)}

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../../css/Post.css";
 import Modal from "./Modal";
 import Comment from "./Comment";
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function Post({ post }) {
 	const [loading, setLoading] = useState(false);
@@ -21,7 +22,7 @@ export default function Post({ post }) {
 			.then((responseData) => setComments(responseData))
 			.then(console.log(comments))
 			.catch()
-			.finally(setLoading(false));
+			.finally(setTimeout(() => setLoading(false) ,2000));
 
 		
 	}
@@ -38,6 +39,7 @@ export default function Post({ post }) {
 			<Modal open={openModal} onClose={modalCloseHandler}>
 				<h1 style={{ color: "white" }}>Hello World</h1>
 				<div className="comments-container">
+					{loading && <LoadingSpinner />}
 					{!loading &&
 						comments &&
 						comments.map((comment) => (
