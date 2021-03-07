@@ -1,1 +1,71 @@
+.card {
+    background-color: #313131;
+    padding: 1rem;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #575757;
+}
 
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__heading {
+    font-size: 1.5re;
+    text-align: center;
+    color: #daa700;
+    margin: .5em 0;
+}
+
+.label {
+    font-size: 1.2rem;
+    margin: .2em 0;
+    color: #eeb600;
+}
+
+.input {
+    font-size: 1.2rem;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background-color: #4b4b4b;
+    padding: .3em;
+    color: rgb(255, 254, 196);
+}
+
+.btn {
+    margin: 1rem 0;
+    padding: .7em .5em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #daa700;
+}
+
+.btn-primary:hover {
+    background-color: #dab336;
+    color: white;
+}
+
+.card__footer {
+    color: wheat;
+    font-weight: 300;
+}
+
+.card__footer a {
+    color: #ad9f029d;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.card__footer a:active,
+.card__footer a:hover,
+.card__footer a.active {
+    color: #ffea00;
+    font-weight: bold;
+}

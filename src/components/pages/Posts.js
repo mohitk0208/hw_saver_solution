@@ -26,7 +26,7 @@ export default function Posts() {
 				<div className="posts-main">
 					<h2>POSTS</h2>
 					<hr />
-					{loading && <LoadingSpinner />}
+					{loading && <LoadingSpinner asOverlay />}
 					{!loading && posts && (
 						<div className="posts">
 							{posts.map((post) => (

@@ -25,7 +25,7 @@ export default function Albums() {
 				<div className="albums-main">
 					<h2>ALBUMS</h2>
 					<hr />
-					{loading && <LoadingSpinner />}
+					{loading && <LoadingSpinner asOverlay />}
 					{!loading && albums && (
 						<div className="albums">
 							{albums.map((album) => (

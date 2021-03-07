@@ -39,24 +39,34 @@
 
 .search-bar,
 .search-btn {
-    padding: 1em;
     outline: none;
     border: 1px solid gray;
     box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.288);
 }
 
 .search-bar {
+    padding: 1em;
     width: 90%;
     border-radius: 100px 0 0 100px;
     background-color: #4b4b4b;
-    color: white;
+    color: wheat;
 }
 
 .search-btn {
+    padding: .5em;
     width: 10%;
     border-radius: 0 100px 100px 0;
     background-color: #3a3a3a;
+}
 
+.search-btn svg {
+    width: 50%;
+    font-size: 1em;
+    fill: #797979;
+}
+
+.search-btn:hover svg {
+    fill: #9e9e9e;
 }
 
 .search-result-container {
@@ -68,4 +78,5 @@
     width: 100%;
     border-radius: 2px;
     background-color: rgba(128, 128, 128, 0.219);
+    box-shadow: 1px 1px 20px  #747474;
 }

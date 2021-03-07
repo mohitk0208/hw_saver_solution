@@ -53,6 +53,7 @@ code {
 hr {
   height: 2px;
   /* background-color: #fefefe; */
+  margin: 0.2em;
   background: radial-gradient(#ffea00,transparent);
   border: none;
 }
