@@ -11,7 +11,10 @@
 
 .home-main {
     width: 80%;
+    height: 100%;
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -27,7 +30,7 @@
 }
 
 .home-main__explanation {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
+    width: 60ch;
     line-height: 2rem;
-
 }

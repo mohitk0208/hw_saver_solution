@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<div className="home-container">
 			<MainNavigation />
-			<div className="home-main">
+			<div className="home-main center">
 				<h2 className="home-main__title">Perseverance Takes a Spin</h2>
 				<p className="home-main__explanation">
 					After arriving at Jezero Crater on Mars, Perseverance went for a spin
