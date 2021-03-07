@@ -2,7 +2,8 @@ import React from "react";
 
 import "../../css/Post.css";
 
-export default function Post() {
+export default function Post({post}) {
+	
 	return (
 		<div className="post-container">
 			<h3 className="post__title">csdkbksndn sadbudsb</h3>
